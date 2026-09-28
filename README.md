@@ -2,9 +2,8 @@
 
 [![Python Version](https://img.shields.io/badge/Python-3.12-blue.svg)](https://www.python.org/)
 [![License: Open Access](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
-[![Status: Reproducible](https://img.shields.io/badge/Reproducibility-Verified%20100%25-brightgreen.svg)]()
 
-This repository contains the complete, fully reproducible analytical dataset, computational scripts, and high-resolution figures for the empirical study:
+This repository contains the dataset, analysis scripts, and figures for the empirical study:
 
 > **Associated factors of the doctor-patient relationship: An Analysis of Healthcare Users in Loja**  
 > *Ruth Maldonado-Rengel, Angélica Arrobo-Rodas, Patricia Díaz Guzmán, Michelle Domínguez, Diana Carolina Sarmiento Peñarreta, Camila Elizabeth Monroy Morillo, Mikaela Milena Cadena Vásconez, Jessie Scarlet Patiño Armijos, Edith Lisbeth Pardo Correa, Daniela Carolina Hurtado Costa, Pablo Andrés Japón Calva.*
@@ -29,11 +28,11 @@ This repository contains the complete, fully reproducible analytical dataset, co
 
 ## Study Overview
 
-* **Design:** Cross-sectional, quantitative observational study.
+* **Design:** A descriptive, cross-sectional, and quantitative research design.
 * **Analytical Sample:** $n = 3,257$ adult patients ($\ge 18$ years) who received outpatient medical consultations.
 * **Geographical Setting:** Loja Canton, southern Ecuador.
-* **Institutional Coverage:** Census of all 30 public healthcare facilities operating under the Ministry of Public Health (MSP), including 27 primary healthcare centers (Types A and B), 1 nested primary care unit, 1 basic hospital, and 1 provincial general reference hospital.
-* **Primary Outcome:** Perceived quality of the physician–patient relationship measured via the **Patient-Doctor Relationship Questionnaire (PDRQ-9)** and operationalized as the **PDRQ-9 Overall Mean Score** (continuous composite scale from 1.00 to 5.00).
+* **Institutional Coverage:** Thirty public healthcare facilities in Loja Canton operating under the Ministry of Public Health (MSP), comprising: 20 Type A health centers, 4 Type B centers, 4 health posts, 1 general hospital, and 1 basic hospital.
+* **Primary Outcome:** Perceived physician–patient relationship evaluated using the **Patient-Doctor Relationship Questionnaire (PDRQ-9)** and operationalized through the continuous **PDRQ-9 Overall Mean Score** (scale 1.00 to 5.00).
 
 ---
 
@@ -41,11 +40,11 @@ This repository contains the complete, fully reproducible analytical dataset, co
 
 ```text
 repositorio_articulo/
-├── README.md                      # Master study documentation & execution guide
-├── DATA_DICTIONARY.md             # Detailed codebook and variable dictionary
-├── requirements.txt               # Computational environment dependencies
+├── README.md                      # Study documentation and execution instructions
+├── DATA_DICTIONARY.md             # Codebook and variable definitions
+├── requirements.txt               # Python package dependencies
 ├── datos/
-│   └── pdrq9_patients_data.xlsx   # Analytical database (n = 3,257, 14 standardized variables)
+│   └── pdrq9_patients_data.xlsx   # Analytical database (n = 3,257)
 ├── scripts/
 │   ├── 00_scale_reliability.py    # Psychometric internal consistency (Cronbach's alpha bootstrap)
 │   ├── 01_sociodemographic.py     # Table 1: Sociodemographic profile calculation
@@ -63,9 +62,9 @@ repositorio_articulo/
 │   ├── 08_multivariable_model.py  # Hierarchical regression calculations (Models 1 & 2, Cluster-SE, ANOVA)
 │   └── 08_multivariable_table.py  # Table 3: Publication Excel generator (Models 1 & 2 side-by-side)
 ├── tablas/
-│   ├── table_1_sociodemographic.xlsx          # Table 1: Excel formatted with publication borders
-│   ├── table_2_pdrq9_descriptive.xlsx         # Table 2: Excel formatted with publication borders
-│   └── table_3_multivariable_regression.xlsx  # Table 3: Excel formatted hierarchical model
+│   ├── table_1_sociodemographic.xlsx          # Table 1: Sociodemographic profile
+│   ├── table_2_pdrq9_descriptive.xlsx         # Table 2: PDRQ-9 item-level and overall statistics
+│   └── table_3_multivariable_regression.xlsx  # Table 3: Hierarchical multivariable regression
 └── imagenes/
     ├── figure_0_normality.png
     ├── figure_1_age.png
@@ -78,7 +77,7 @@ repositorio_articulo/
 
 ## Environment Setup and Requirements
 
-This replication pipeline was developed and validated in **Python v3.12**.
+This replication pipeline was developed and tested in **Python v3.12**.
 
 ### Installation
 
@@ -90,16 +89,16 @@ cd repositorio_articulo
 pip install -r requirements.txt
 ```
 
-### Core Libraries and Validated Versions
+### Core Libraries
 
 | Library | Version | Purpose |
 | :--- | :--- | :--- |
-| `pandas` | $\ge 2.2.0$ | Data manipulation, curation, and tabular management |
+| `pandas` | $\ge 2.2.0$ | Data manipulation and tabular management |
 | `scipy` | $\ge 1.14.0$ | Parametric and non-parametric biostatistical testing |
 | `statsmodels` | $\ge 0.14.0$ | Hierarchical OLS regression and cluster-robust standard errors |
-| `matplotlib` | $\ge 3.9.0$ | Core scientific graphic canvas and rendering |
-| `seaborn` | $\ge 0.13.0$ | High-level publication visualization and density plotting |
-| `openpyxl` | $\ge 3.1.0$ | Excel engine reading `.xlsx` spreadsheets |
+| `matplotlib` | $\ge 3.9.0$ | Graphic rendering and figure generation |
+| `seaborn` | $\ge 0.13.0$ | Statistical visualization |
+| `openpyxl` | $\ge 3.1.0$ | Reading and writing Excel spreadsheets |
 
 ---
 
@@ -152,7 +151,7 @@ python scripts/08_multivariable_table.py
 * **Output:**
   * Model 1 (Sociodemographics): $R^2 = 2.89\%, F(9, 3247) = 10.73, p < 0.001$.
   * Model 2 (Facility-Adjusted): $R^2 = 35.66\%, \Delta R^2 = 32.77\%, F(29, 3218) = 56.52, p < 0.001$ (Facilities explain 91.90% of explainable variance).
-  * Cluster-Robust Adjustment: Age $>60$ years remains the sole independent predictor ($\beta = +0.357, 95\% \text{ CI}: +0.225 \text{ to } +0.489, z = 5.31, p < 0.001$).
+  * Cluster-Robust Adjustment: Age $>60$ years is the sole sociodemographic factor with an independent positive association ($\beta = +0.357, 95\% \text{ CI}: +0.225 \text{ to } +0.489, z = 5.31, p < 0.001$).
   * Table 3: Generated in Excel at `tablas/table_3_multivariable_regression.xlsx` with clean publication formatting.
 
 ---
@@ -167,7 +166,7 @@ python scripts/08_multivariable_table.py
 | **Normality Assessment** | `03_normality_test.py`, `03_normality_plot.py` | `imagenes/figure_0_normality.png` |
 | **Figure 1** (Age comparison) | `05_inference_age.py`, `05_plot_age.py` | `imagenes/figure_1_age.png` |
 | **Figure 2** (Marital status) | `06_inference_marital.py`, `06_plot_marital.py` | `imagenes/figure_2_marital_status.png` |
-| **Figure 3** (Healthcare centers) | `07_inference_centers.py`, `07_plot_centers.py` | `imagenes/figure_3_healthcare_centers.png` |
+| **Figure 3** (Healthcare facilities) | `07_inference_centers.py`, `07_plot_centers.py` | `imagenes/figure_3_healthcare_centers.png` |
 | **Figure 4** (Sex comparison) | `04_inference_sex.py`, `04_plot_sex.py` | `imagenes/figure_4_sex.png` |
 | **Table 3** (Hierarchical Regression) | `08_multivariable_model.py`, `08_multivariable_table.py` | Console model statistics & `tablas/table_3_multivariable_regression.xlsx` |
 

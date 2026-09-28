@@ -4,7 +4,7 @@
 **Authors:** Research Team  
 **Institution:** Universidad Técnica Particular de Loja (UTPL), Loja, Ecuador  
 **Analytical Dataset:** `datos/pdrq9_patients_data.xlsx`  
-**Sample Size:** n = 3,257 adult patients across 30 primary healthcare facilities  
+**Sample Size:** n = 3,257 adult outpatients across 30 public healthcare facilities  
 **Format:** Excel Spreadsheet (.xlsx)  
 
 ---
@@ -68,44 +68,43 @@ Responses to all 9 items (`pdrq_item1` to `pdrq_item9`) are scored on a 5-point 
 * **Operationalization:** The continuous composite score calculated as the unweighted arithmetic mean across all 9 items for each individual participant:
   $$\text{PDRQ-9 Overall Mean Score} = \frac{1}{9} \sum_{i=1}^{9} \text{pdrq\_item}_i$$
 * **Theoretical Range:** 1.00 to 5.00 points.
-* **Methodological Rationale:** Due to a pronounced ceiling effect across raw item responses (median = 5.00 for all 9 items), computing the overall mean score restores decimal variability (sample median = 4.56, mean = 4.36, SD = 0.74), capturing subtle perceptual differences between healthcare centers and enabling parametric multivariable linear modeling.
+* **Methodological Rationale:** Due to a pronounced ceiling effect across raw item responses (median = 5.00 for all 9 items), computing the overall mean score restores decimal variability (sample median = 4.56, mean = 4.36, SD = 0.74), capturing subtle perceptual differences across healthcare facilities and enabling parametric multivariable linear modeling.
 
 ---
 
 ## 4. Healthcare Facilities Catalog (`health_center`)
 
-The study included the entirety of the Ministry of Public Health (MSP) public healthcare network in Loja Canton (30 facilities):
+The study included all 30 public healthcare facilities in Loja Canton operating under the Ministry of Public Health (MSP), comprising 20 Type A health centers, 4 Type B centers, 4 health posts, 1 basic hospital, and 1 general hospital:
 
 | Code | Official Facility Name | Facility Type / Level |
 | :--- | :--- | :--- |
-| **CS1** | Centro de Salud No. 1 | Health Center Type A |
-| **CS2** | Centro de Salud No. 2 | Health Center Type A |
-| **CS3** | Centro de Salud No. 3 | Health Center Type A |
+| **CS1** | Centro de Salud No. 1 | Health Center Type B |
+| **CS2** | Centro de Salud No. 2 | Health Center Type B |
+| **CS3** | Centro de Salud No. 3 | Health Center Type B |
 | **CSA** | Aguangora | Health Center Type A |
 | **CSB** | Belén | Health Center Type A |
-| **CSCA** | Carigán | Health Center Type A |
+| **CSCA** | Carigán | Health Post |
 | **CSCH** | Chuquiribamba | Health Center Type A |
 | **CSCHO** | Chontacruz | Health Center Type A |
-| **CSCO** | Comunidades | Health Center Type A |
+| **CSCO** | Comunidades | Health Post |
 | **CSCON** | Consacola | Health Center Type A |
 | **CSEC** | El Cisne | Health Center Type A |
-| **CSG** | Gualel | Health Center Type A |
+| **CSG** | Gualel | Health Post |
 | **CSHDC** | Héroes del Cenepa | Health Center Type A |
 | **CSJ** | Jimbilla | Health Center Type A |
-| **CSLP** | La Pradera | Health Center Type A |
-| **CSM** | Malacatos | Health Center Type B |
+| **CSM** | Malacatos | Health Center Type A |
 | **CSMI** | Miraflores | Health Center Type A |
 | **CSMO** | Motupe | Health Center Type A |
 | **CSO** | Obrapía | Health Center Type A |
-| **CSP** | Pichic | Health Center Type A |
+| **CSP** | Pichic | Health Post |
 | **CSS** | Santiago | Health Center Type A |
 | **CSSC** | San Cayetano | Health Center Type A |
-| **CSSL** | San Lucas | Health Center Type B |
-| **CST** | Taquil | Health Center Type A |
+| **CSSL** | San Lucas | Health Center Type A |
+| **CST** | Taquil | Health Center Type B |
 | **CSTC** | Tierras Coloradas | Health Center Type A |
 | **CSUL** | Unión Lojana | Health Center Type A |
 | **CSY** | Yangana | Health Center Type A |
 | **CSZH** | Zamora Huaico | Health Center Type A |
 | **HBV** | Hospital Básico Vilcabamba | Basic Hospital |
 | **HGIA** | Hospital General Isidro Ayora | General Hospital (Provincial Reference) |
-| **UAV** | Unidad Anidada Vilcabamba | Nested Primary Unit |
+| **UAV** | Unidad Anidada Vilcabamba | Health Center Type A (Nested Unit) |
