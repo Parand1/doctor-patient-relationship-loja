@@ -116,7 +116,7 @@ def main():
             ws.column_dimensions[col_letter].width = max(max_len + 4, 12)
 
     print("=" * 80)
-    print(f"Table 1. Sociodemographic profile of patients treated at healthcare centers in Loja (n = {total_n:,}).")
+    print(f"Table 1. Sociodemographic profile of patients treated at healthcare facilities in Loja (n = {total_n:,}).")
     print("=" * 80)
     print(df_table1.to_string(index=False))
     print("=" * 80)

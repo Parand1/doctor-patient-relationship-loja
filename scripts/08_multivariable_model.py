@@ -9,8 +9,8 @@ Affiliations:
 
 Description:
 Computes the two-stage hierarchical multivariable linear regression and cluster-robust
-covariance adjustment evaluating factors associated with perceived physician-patient
-relationship quality (PDRQ-9 Overall Mean Score):
+covariance adjustment evaluating factors associated with the perceived physician-patient
+relationship (PDRQ-9 Overall Mean Score):
   1. Model 1 (Sociodemographic): Evaluates joint impact of Sex, Age cohort, and Marital Status.
   2. Model 2 (Facility-Adjusted Fixed Effects): Adds 30 healthcare facilities to quantify
      incremental explained variance (Delta R²) and nested ANOVA F-change test.

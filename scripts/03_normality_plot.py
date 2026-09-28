@@ -8,7 +8,7 @@ Affiliations:
   - Facultad de Ciencias de la Salud, Universidad Técnica Particular de Loja (UTPL), Loja, Ecuador
 
 Description:
-Generates publication-quality diagnostic figure (Figure 0) with 2 panels in high resolution (300 DPI)
+Generates diagnostic figure (Figure 0) with 2 panels
 documenting the non-normal distribution and clinical ceiling effect of the PDRQ-9 Overall Mean Score:
   - Panel A: Density histogram with empirical KDE curve vs. theoretical normal curve,
     displaying sample mean and median.

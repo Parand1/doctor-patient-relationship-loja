@@ -12,7 +12,7 @@ Inferential bivariate comparison of the perceived physician-patient relationship
 (PDRQ-9 Overall Mean Score) across the 30 public healthcare facilities in Loja Canton.
 Performs:
 1. Facility-level parametric and non-parametric descriptive profiling.
-2. Kruskal-Wallis H omnibus test across 30 healthcare centers and eta-squared (eta²_H) calculation.
+2. Kruskal-Wallis H omnibus test across all 30 public healthcare facilities and eta-squared (eta²_H) calculation.
 """
 
 import os
@@ -91,7 +91,7 @@ def main():
     print("\n" + "=" * 90)
     print("KEY FINDINGS:")
     print("1. Healthcare facility is the dominant factor, explaining ~31.2% of outcome variance.")
-    print("2. Upper ceiling excellence (Median = 5.00): Consacola, Motupe, Unión Lojana, Belén, San Cayetano.")
+    print("2. Ceiling scores (Median = 5.00): Consacola, Motupe, Unión Lojana, Belén, San Cayetano.")
     print("3. Intermediate provincial reference: Hospital General Isidro Ayora (HGIA, n = 481, Median = 4.22).")
     print("4. Extreme institutional outlier: Centro de Salud Gualel (CSG, n = 74, Median = 2.00, IQR = 0.53).")
     print("=" * 90)

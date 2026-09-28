@@ -88,8 +88,8 @@ def main():
     print(f"Rank-biserial correlation (r_rb) = {abs(rank_biserial):.3f}")
 
     print("\n" + "=" * 80)
-    print("CONCLUSION: Patient sex is not significantly associated with perceived")
-    print("physician-patient relationship quality (p = 0.910, effect size ~ 0.00).")
+    print("CONCLUSION: Patient sex is not significantly associated with the perceived")
+    print("physician-patient relationship (p = 0.910, effect size ~ 0.00).")
     print("=" * 80)
 
 
