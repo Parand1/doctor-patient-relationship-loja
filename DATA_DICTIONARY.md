@@ -1,11 +1,12 @@
 # Data Dictionary and Codebook
 
 **Study Title:** Associated factors of the doctor-patient relationship: An Analysis of Healthcare Users in Loja  
-**Authors:** Research Team  
+**Lead Data Analyst & Code:** Pablo Andrés Japón Calva (ORCID: [0009-0001-0705-8120](https://orcid.org/0009-0001-0705-8120))  
+**Study Co-Investigators:** Ruth Maldonado-Rengel, et al.  
 **Institution:** Universidad Técnica Particular de Loja (UTPL), Loja, Ecuador  
 **Analytical Dataset:** `datos/pdrq9_patients_data.xlsx`  
-**Sample Size:** n = 3,257 adult outpatients across 30 public healthcare facilities  
-**Format:** Excel Spreadsheet (.xlsx)  
+**Sample Size:** $n = 3,257$ complete adult outpatient records across 30 public healthcare facilities  
+**Format:** Excel Spreadsheet (`.xlsx`)  
 
 ---
 
@@ -33,42 +34,43 @@
 ## 2. Sociodemographic Variables Coding
 
 ### Biological Sex (`sex`)
-* **1 = Male:** n = 995 (30.55%)
-* **2 = Female:** n = 2,262 (69.45%)
+* **1 = Male:** $n = 995$ ($30.55\%$) [Reference category in multivariable regression]
+* **2 = Female:** $n = 2,262$ ($69.45\%$)
 
 ### Age Groups (`age_group`)
-* **1 = 18–30 years:** n = 938 (28.80%) [Reference category in multivariable regression]
-* **2 = 31–40 years:** n = 708 (21.74%)
-* **3 = 41–50 years:** n = 646 (19.83%)
-* **4 = 51–60 years:** n = 599 (18.39%)
-* **5 = Over 60 years:** n = 366 (11.24%)
+* **1 = 18–30 years:** $n = 938$ ($28.80\%$) [Reference category in multivariable regression]
+* **2 = 31–40 years:** $n = 708$ ($21.74\%$)
+* **3 = 41–50 years:** $n = 646$ ($19.83\%$)
+* **4 = 51–60 years:** $n = 599$ ($18.39\%$)
+* **5 = Over 60 years:** $n = 366$ ($11.24\%$)
 
 ### Marital Status (`marital_status`)
-* **1 = Married:** n = 1,369 (42.03%) [Reference category in multivariable regression]
-* **2 = Divorced:** n = 257 (7.89%)
-* **3 = Widowed:** n = 168 (5.16%)
-* **4 = Single:** n = 1,017 (31.23%)
-* **5 = Common-law union:** n = 446 (13.69%)
+* **1 = Married:** $n = 1,369$ ($42.03\%$) [Reference category in multivariable regression]
+* **2 = Divorced:** $n = 257$ ($7.89\%$)
+* **3 = Widowed:** $n = 168$ ($5.16\%$)
+* **4 = Single:** $n = 1,017$ ($31.23\%$)
+* **5 = Common-law union:** $n = 446$ ($13.69\%$)
 
 ---
 
 ## 3. Patient-Doctor Relationship Questionnaire (PDRQ-9)
 
-The PDRQ-9 is a 9-item psychometrically validated instrument assessing patient perception of the therapeutic relationship in primary care consultations.
+The study administered the full 9-item Spanish version of the PDRQ-9 validated by Fernández Castillo et al. (derived from the original 9-item PDRQ-9 by Van der Feltz-Cornelis et al.), without modifications, adaptations, or new translations. The PDRQ-9 is validated and analyzed as a single unidimensional construct assessing patients' subjective perceptions of their clinical relationship with the physician.
 
 ### Likert Response Scale
 Responses to all 9 items (`pdrq_item1` to `pdrq_item9`) are scored on a 5-point Likert scale:
 * **1 = Strongly disagree** (Totalmente en desacuerdo)
 * **2 = Disagree** (En desacuerdo)
-* **3 = Neutral / Indifferent** (Indiferente)
+* **3 = Neutral** (Indiferente / Neutral)
 * **4 = Agree** (De acuerdo)
 * **5 = Strongly agree** (Totalmente de acuerdo)
 
 ### Primary Outcome: PDRQ-9 Overall Mean Score
-* **Operationalization:** The continuous composite score calculated as the unweighted arithmetic mean across all 9 items for each individual participant:
+* **Operationalization:** The continuous composite score calculated as the unweighted arithmetic mean across all 9 items for each participant:
   $$\text{PDRQ-9 Overall Mean Score} = \frac{1}{9} \sum_{i=1}^{9} \text{pdrq\_item}_i$$
-* **Theoretical Range:** 1.00 to 5.00 points.
-* **Methodological Rationale:** Due to a pronounced ceiling effect across raw item responses (median = 5.00 for all 9 items), computing the overall mean score restores decimal variability (sample median = 4.56, mean = 4.36, SD = 0.74), capturing subtle perceptual differences across healthcare facilities and enabling parametric multivariable linear modeling.
+* **Theoretical Range:** $1.00$ to $5.00$ points.
+* **Missing Data Handling:** Only fully completed questionnaires were retained in the analytical sample ($n = 3,257$); there are zero missing item-level responses and no data imputation was performed.
+* **Distributional Properties:** Because individual items exhibit a ceiling effect (median $= 5.00$ across all 9 items; $29.2\%$ of participants scored the maximum $5.00$ across all items), computing the overall mean score preserves continuous decimal granularity ($\text{sample median} = 4.56, \text{IQR} = 1.00 [4.00-5.00]; \text{mean} = 4.36, \text{SD} = 0.74$) for both non-parametric bivariate comparisons and multivariable modeling (verified via quantile and upper-censored Tobit sensitivity analyses).
 
 ---
 
