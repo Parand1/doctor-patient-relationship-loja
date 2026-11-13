@@ -1,8 +1,11 @@
 """
 Study: Associated factors of the doctor-patient relationship: An Analysis of Healthcare Users in Loja
 Script: 06_inference_marital.py
-Authors: Research Team
-Affiliation: Universidad Técnica Particular de Loja (UTPL), Loja, Ecuador
+Lead Data Analysis & Code: Pablo Andrés Japón Calva (ORCID: 0009-0001-0705-8120)
+Study Co-Investigators: Ruth Maldonado-Rengel, et al.
+Affiliations:
+  - Independent Researcher, Loja, Ecuador
+  - Facultad de Ciencias de la Salud, Universidad Técnica Particular de Loja (UTPL), Loja, Ecuador
 
 Description:
 Inferential bivariate comparison of the perceived physician-patient relationship
